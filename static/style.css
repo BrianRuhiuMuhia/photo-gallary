@@ -1,0 +1,134 @@
+html body{
+    padding:0;
+    margin:0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+img{
+    width:100%;
+    max-width:600px;
+}
+a{
+    text-decoration: none;
+}
+h1,h2{
+    margin:0;
+    padding:0;
+}
+.container{
+    width:98vw;
+    max-width:1000px;
+    margin-inline:auto;
+}
+.wrapper{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+    grid-template-rows: auto;
+    gap:1em;
+}
+.nav-bar{
+height:3rem;
+background-color: rgb(102, 255, 0);
+width:100%;
+padding-block:0.5em;
+margin-bottom:1em;
+display:flex;
+align-items:center
+}
+ul{
+    list-style: none;
+    margin:none;
+}
+.nav{
+    display:flex;
+    padding-block:0.2em;
+    justify-content: space-between;
+}
+.link{
+    text-decoration: none;
+    color:white;
+    font-size: 1em;;
+}
+.form{
+    width:400px;
+    display: flex;
+    flex-direction:column;
+    position:absolute;
+    gap:0.5em;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:1em 0.5em;
+    color:black;
+    border:1px solid grey;
+}
+label::after{
+    content:"*";
+}
+input[type='text'],input[type='password'],input[type='email']{
+    height:40px;
+    border:solid 1px grey;
+}
+input[type='submit']{
+    background-color: lime;
+    width:100px;
+    height:40px;
+    border-radius: 0.5em;
+    border:none;
+    color:white;
+}
+.delete{
+color:white;
+background-color: lime;
+padding:0.8em;
+border-radius:0.5em;
+}
+.upload-form{
+margin-top:2em;
+display:flex;
+align-items: center;
+justify-content: center;
+}
+.images{
+    display:flex;
+    flex-direction: column;
+    row-gap:0.5em;
+    align-items: center;
+    justify-content: center;
+}
+.form-links{
+    display:flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:900px){
+.nav-bar{
+    height:8rem;
+}
+.nav{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav .item{
+    padding-block:0.2em;
+}
+.wrapper{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    grid-template-rows: auto;
+    gap:0.5em;
+}
+}
+@media screen and (max-width:500px){
+    img{
+        width:200px;
+}
+
+.wrapper{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: auto;
+    gap:0.5em;
+}
+}

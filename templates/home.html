@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+{%block content%}
+<div class="wrapper">
+{% for image in user.image%}
+<div class="images">
+<img src="../static/IMAGES/{{image.name}}">
+<a href="/delete{{image.id}}" class="delete">Delete</a>
+</div>
+{%endfor%}
+</div>
+
+{%endblock%}
